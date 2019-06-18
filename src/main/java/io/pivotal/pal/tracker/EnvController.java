@@ -30,6 +30,7 @@ public class EnvController {
         envDetails.put("CF_INSTANCE_INDEX",cfInstIndex);
         envDetails.put("CF_INSTANCE_ADDR",cfInstAdd);
         return envDetails;
+
     }
 
 }
