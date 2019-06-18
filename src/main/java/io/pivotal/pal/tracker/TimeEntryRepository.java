@@ -5,13 +5,13 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface TimeEntryRepository {
-    ResponseEntity create(TimeEntry any);
+    TimeEntry create(TimeEntry any);
 
-    void find(long timeEntryId);
+    TimeEntry find(long timeEntryId);
 
-    ResponseEntity<List<TimeEntry>> list();
+    List<TimeEntry> list();
 
-    ResponseEntity update(long eq, TimeEntry any);
+    TimeEntry update(long eq, TimeEntry any);
 
-    ResponseEntity delete(long timeEntryId);
+    void delete(long timeEntryId);
 }
