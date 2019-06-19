@@ -18,7 +18,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public JdbcTimeEntryRepository(MysqlDataSource ds){
+    public JdbcTimeEntryRepository(DataSource ds){
 
 
         jdbcTemplate = new JdbcTemplate(ds);
