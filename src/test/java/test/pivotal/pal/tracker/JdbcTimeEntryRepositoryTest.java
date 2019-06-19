@@ -36,8 +36,10 @@ public class JdbcTimeEntryRepositoryTest {
 
     @Test
     public void createInsertsATimeEntryRecord() {
+
         TimeEntry newTimeEntry = new TimeEntry(123, 321, LocalDate.parse("2017-01-09"), 8);
         TimeEntry entry = subject.create(newTimeEntry);
+        System.out.println("ID " +entry.toString());
 
         Map<String, Object> foundEntry = jdbcTemplate.queryForMap("Select * from time_entries where id = ?", entry.getId());
 
